@@ -1,0 +1,8 @@
+# Archivos y carpetas a ignorar en proyectos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpeta del entorno virtual
+venv/
