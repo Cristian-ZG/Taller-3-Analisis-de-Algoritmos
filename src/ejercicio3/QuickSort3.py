@@ -24,3 +24,4 @@ class QuickSort3:
             pivote = QuickSort3.divicion(lista, menor, mayor)
             QuickSort3.quickSort(lista, menor, pivote-1)
             QuickSort3.quickSort(lista, pivote+1, mayor)
+            return lista
