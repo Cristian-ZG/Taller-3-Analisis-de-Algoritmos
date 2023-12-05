@@ -3,6 +3,7 @@ import time
 import sys
 
 from src.ejercicio1.StoogeSort import sSort
+from src.ejercicio2.Ejercicio2 import Moda
 from src.ejercicio3.InsertionSort import iSort
 from src.ejercicio3.MergeSort import mSort
 from src.ejercicio3.QuickSort3 import QuickSort3
@@ -12,10 +13,9 @@ class AlgoritmosTester:
     @staticmethod
     def main():
 
-        # Se cambia el limite de recursion que viene por defecto.
-        #sys.setrecursionlimit(20000)
-        # Crea una arreglo aleatorio de tamaño 10.
-        listn = [random.randint(1, 100) for _ in range(100)]
+        # Crea una arreglo aleatorio de tamaño que se desee.
+        ## Asignación de tamaño al arreglo a trabajar.
+        listn = [random.randint(1, 100) for _ in range(10)]
         print(f"Lista aleatoria de tamaño {len(listn)}: {listn}\n")
 
         #Ejercicio 1 - Test StoogeSort
@@ -30,10 +30,10 @@ class AlgoritmosTester:
 
         # Ejercicio 2
         def ejr2():
-            inicio2 = time.time()
-            print("Aqui va el llamado del segundo")
-            fin2 = time.time()
-            print(f"El tiempo de ejecución de Ejr2(Divide y venceras) fue: {fin2 - inicio22:0.5f} segundos")
+            inicio2 = time.perf_counter()
+            print(Moda.moda(listn))
+            fin2 = time.perf_counter()
+            print(f"El tiempo de ejecución de Ejr2(Divide y venceras) fue: {fin2 - inicio2:0.5f} segundos")
 
         # Ejercicio 3}
         def ejr3():
